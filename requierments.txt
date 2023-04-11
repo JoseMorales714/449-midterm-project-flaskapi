@@ -1,2 +1,3 @@
 These are the needed necessary packages
--> flask, pymysql
+-> flask, pymysql, flask_cors, re
+-> render_template, request, redirect, url_for, session, abort, jsonify
