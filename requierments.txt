@@ -1,2 +1,2 @@
 These are the needed necessary packages
-->
+-> flask, pymysql
