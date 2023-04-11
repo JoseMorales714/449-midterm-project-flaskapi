@@ -7,6 +7,12 @@ from datetime import timedelta
 app = Flask(__name__)
 cors = CORS(app, resources={r"/*": {"origins": "*"}})
 
+# app.config['MAX_CONTENT_LENGTH'] = 1024 * 1024
+# app.config['UPLOAD_EXTENSIONS'] = ['.jpg', '.png', '.gif']
+# app.config['UPLOAD_PATH'] = 'uploads'
+
+
+
 # To connect MySQL database
 conn = pymysql.connect(
     host='localhost',
@@ -15,6 +21,19 @@ conn = pymysql.connect(
     db='',
     cursorclass=pymysql.cursors.DictCursor
 )
+
+# def upload_files():
+#     uploaded_file = request.files['file']
+#     filename = secure_filename(uploaded_file.filename)
+#     if filename != '':
+#         file_ext = os.path.splitext(filename)[1]
+#         if file_ext not in app.config['UPLOAD_EXTENSIONS']:
+#             abort(400)
+#         uploaded_file.save(os.path.join(app.config['UPLOAD_PATH'], filename))
+#         return redirect(url_for('index'))
+
+
+
 # Error handling
 @app.errorhandler(400)
 def bad_request(e):
