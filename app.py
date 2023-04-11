@@ -13,7 +13,7 @@ app.secret_key = 'happykey'
 app.config['SECRET_KEY']= 'key123'
 app.config['MAX_CONTENT_LENGTH'] = 1024*1024
 app.config['UPLOAD_EXTENSIONS'] = ['.jpg', '.png', '.gif', '.png']
-app.config['UPLOAD_PATH'] = 'uploads'
+app.config['UPLOAD_PATH'] = 'file'
 
 
 # To connect MySQL database
