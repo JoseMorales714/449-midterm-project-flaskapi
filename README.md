@@ -1,6 +1,6 @@
 # 449-midterm-project-flaskapi
 
-Instructions on ho to SETUP project
+Instructions on how to SETUP project
 -> install all the packages inside requierments.txt
 
 
